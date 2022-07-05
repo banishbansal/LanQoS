@@ -1,0 +1,46 @@
+{
+    "problem_type": "classification",
+    "modelName": "AION_449",
+    "modelVersion": "1",
+    "target_feature": "QoS",
+    "bin_features": [],
+    "num_fill_method": "median",
+    "cat_fill_method": "mode",
+    "n_bins": 5,
+    "normalization_method": null,
+    "outlier_detection": null,
+    "train_features": [
+        "retransmission",
+        "signalStrength",
+        "bytesReceived",
+        "bytesSent",
+        "errorReceived",
+        "errorSent",
+        "Noise"
+    ],
+    "num_features": [
+        "signalStrength",
+        "bytesReceived",
+        "bytesSent",
+        "errorReceived",
+        "errorSent",
+        "Noise"
+    ],
+    "cat_num_features": [
+        "bytesReceived",
+        "errorReceived",
+        "retransmission",
+        "Noise",
+        "errorSent",
+        "signalStrength",
+        "bytesSent"
+    ],
+    "cat_features": [
+        "QoS"
+    ],
+    "text_features": [],
+    "word2num_features": [],
+    "__comment__": "In case input and output path is not set then it will default to model name and version, in this case AION_449_1",
+    "inputPath": "AION_449_1",
+    "outputPath": "AION_449_1"
+}

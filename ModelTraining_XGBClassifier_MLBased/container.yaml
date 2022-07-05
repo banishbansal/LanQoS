@@ -1,0 +1,17 @@
+name: XGBClassifier_MLBased
+description: XGBClassifier_MLBased
+inputs:
+- {name: ip, type: LocalPath, description: 'Path From where data will be Read.'}
+outputs:
+- {name: op, type: LocalPath, description: 'Path where data will be stored.'}
+implementation:
+    container:
+        image: xgbclassifier_mlbased
+        command: [
+        python, 
+        code.py,
+        -i,
+        {inputPath: ip},
+        -o,
+        {outputPath: op},
+        ]

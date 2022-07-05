@@ -1,0 +1,10 @@
+{
+    "problem_type": "classification",
+    "modelName": "AION_449",
+    "modelVersion": "1",
+    "__comment__": "In case input and output path is not set then it will default to model name and version, in this case AION_449_1",
+    "inputPath": "AION_449_1",
+    "outputPath": "AION_449_1",
+    "ipAddress": "127.0.0.1",
+    "portNo": "8094"
+}

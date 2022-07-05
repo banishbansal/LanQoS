@@ -1,0 +1,17 @@
+name: ModelRegistry
+description: Model Registry
+inputs:
+- {name: m1, type: LocalPath, description: 'Path From where data will be Read.'}
+outputs:
+- {name: op, type: LocalPath, description: 'Path where data will be stored.'}
+implementation:
+    container:
+        image: modelregistry
+        command: [
+        python, 
+        code.py,
+        -m1,
+        {inputPath: ip},
+        -o,
+        {outputPath: op},
+        ]

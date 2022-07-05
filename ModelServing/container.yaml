@@ -1,0 +1,23 @@
+ModelServing
+description: ModelServing
+inputs:
+- {name: ip, type: LocalPath, description: 'Path From where data will be Read.'}
+- {name:ipAddress, type: String,default:'0.0.0.0'}
+- {name:portNo, type: Integer,default:'8094'}
+outputs:
+- {name: op, type: LocalPath, description: 'Path where data will be stored.'}
+implementation:
+    container:
+        image: modelserving
+        command: [
+        python, 
+        code.py,
+        -i,
+        {inputPath: ip},
+        -o,
+        {outputPath: op},
+        -ip,
+        {inputValue: ipAddress},
+        -p,
+        {inputValue: portNo},
+        ]

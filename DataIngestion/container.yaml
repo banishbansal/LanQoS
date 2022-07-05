@@ -1,0 +1,20 @@
+name: Ingest Data
+description: Ingest data
+inputs:
+- {name: ip, type: LocalPath, description: 'Path From where data will be Read.'}
+- {name: iuri, type: String,default:'',description: 'Path From where data will be Read.'}
+outputs:
+- {name: op, type: LocalPath, description: 'Path where data will be stored.'}
+implementation:
+    container:
+        image: dataingestion
+        command: [
+        python, 
+        code.py,
+        -i,
+        {inputPath: ip},
+        -u,
+        {inputValue: iuri},
+        -o,
+        {outputPath: op},
+        ]
